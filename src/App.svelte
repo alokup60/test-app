@@ -1,21 +1,9 @@
 <script>
-	let nums = [1,2,3,4];
-
-	function addNum (){
-		nums = [...nums,nums.length + 1] 
-	}
-
-	$: sum = nums.reduce((acc,curr) => acc+curr,0)
+	import Nested from "./Nested.svelte";
 </script>
 
-<main>
+<Nested answer={40}/>
 
-	<p>{nums.join(' + ')} = {sum}</p>
-
-	<button on:click={addNum}>
-		Add Numbers
-	</button>
-</main>
 
 <style>
 	button{
