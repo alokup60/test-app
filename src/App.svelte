@@ -5,6 +5,11 @@
 	const inc = () => {
 		count +=1
 	}
+
+	$: {
+		console.log(count)
+		console.log("Whenever count digits has changed it will be rendered.")
+	}
 </script>
 
 <main>
@@ -13,6 +18,8 @@
 		{count === 1 ? "time" :"times"}
 		</button>
 	<p>{dbleCount}</p>
+
+
 </main>
 
 <style>
