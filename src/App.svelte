@@ -1,17 +1,11 @@
 <script>
-	let num = 0
+	let names = ["Alok","Bruce","Anil"]
 </script>
 
 <main>
-	{#if num === 0}
-		<h2>Number is Zero</h2>
-	{:else if num > 0}
-		<h2>Number is Positive</h2>
-	{:else if num < 0}
-		<h2>number is Negative</h2>
-	{:else}
-		<h2>Not a Number</h2>
-	{/if}
+	{#each names as name,index}
+	<h2>{index +1}{name}</h2>
+	{/each}
 </main>
 
 <style>
