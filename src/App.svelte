@@ -1,25 +1,20 @@
 <script>
-	let count = 0
-	$: dbleCount = count * 2
+	let nums = [1,2,3,4];
 
-	const inc = () => {
-		count +=1
+	function addNum (){
+		nums = [...nums,nums.length + 1] 
 	}
 
-	$: {
-		console.log(count)
-		console.log("Whenever count digits has changed it will be rendered.")
-	}
+	$: sum = nums.reduce((acc,curr) => acc+curr,0)
 </script>
 
 <main>
-	<button on:click={inc}>
-		Clicked {count}
-		{count === 1 ? "time" :"times"}
-		</button>
-	<p>{dbleCount}</p>
 
+	<p>{nums.join(' + ')} = {sum}</p>
 
+	<button on:click={addNum}>
+		Add Numbers
+	</button>
 </main>
 
 <style>
