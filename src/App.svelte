@@ -2,11 +2,13 @@
 	export let name;
 	const designation = "Software Engineer"
 	const boldText = `<b>Bold Text</b>`
+	const staus = true;
 </script>
 
 <main>
 	<h1>Hello {name}! {designation}</h1>
 	<div>{@html boldText}</div>
+	<h2 class={staus ? "success" : "danger"}>Conditional Class</h2>
 </main>
 
 <style>
@@ -15,6 +17,14 @@
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
+	}
+
+	.success{
+		color: green;
+	}
+
+	.danger {
+		color: red;
 	}
 
 	h1 {
