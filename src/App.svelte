@@ -1,5 +1,6 @@
 <script>
 	let count = 0
+	$: dbleCount = count * 2
 
 	const inc = () => {
 		count +=1
@@ -11,6 +12,7 @@
 		Clicked {count}
 		{count === 1 ? "time" :"times"}
 		</button>
+	<p>{dbleCount}</p>
 </main>
 
 <style>
