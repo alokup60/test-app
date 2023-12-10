@@ -1,10 +1,12 @@
 <script>
 	export let name;
 	const designation = "Software Engineer"
+	const boldText = `<b>Bold Text</b>`
 </script>
 
 <main>
 	<h1>Hello {name}! {designation}</h1>
+	<div>{@html boldText}</div>
 </main>
 
 <style>
