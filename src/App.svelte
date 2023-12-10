@@ -1,14 +1,17 @@
 <script>
-	export let name;
-	const designation = "Software Engineer"
-	const boldText = `<b>Bold Text</b>`
-	const staus = true;
+	let num = 0
 </script>
 
 <main>
-	<h1>Hello {name}! {designation}</h1>
-	<div>{@html boldText}</div>
-	<h2 class={staus ? "success" : "danger"}>Conditional Class</h2>
+	{#if num === 0}
+		<h2>Number is Zero</h2>
+	{:else if num > 0}
+		<h2>Number is Positive</h2>
+	{:else if num < 0}
+		<h2>number is Negative</h2>
+	{:else}
+		<h2>Not a Number</h2>
+	{/if}
 </main>
 
 <style>
