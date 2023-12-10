@@ -1,34 +1,24 @@
 <script>
-	let names = ["Alok","Bruce","Anil"]
+	let count = 0
+
+	const inc = () => {
+		count +=1
+	}
 </script>
 
 <main>
-	{#each names as name,index}
-	<h2>{index +1}{name}</h2>
-	{/each}
+	<button on:click={inc}>
+		Clicked {count}
+		{count === 1 ? "time" :"times"}
+		</button>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	.success{
-		color: green;
-	}
-
-	.danger {
-		color: red;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	button{
+		background-color: rgb(38, 38, 129);
+		color: white;
+		border-radius: 8px;
+		cursor: pointer;
 	}
 
 	@media (min-width: 640px) {
