@@ -1,8 +1,10 @@
 <script>
 	import Nested from "./Nested.svelte";
+	import Test from "./components/Test.svelte";
 </script>
 
 <Nested answer={40}/>
+<Test />
 
 
 <style>
